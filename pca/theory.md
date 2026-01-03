@@ -15,12 +15,10 @@ The primary goal of PCA is to find patterns in data based on the correlation bet
 * **Data Compression:** It helps in compressing data onto a lower-dimensional feature subspace, which is beneficial for computational efficiency.
 
 
-*
-**Mitigating Overfitting:** By reducing the dimensionality of the data, PCA can help reduce the "curse of dimensionality" and prevent overfitting in non-regularized models.
+* **Mitigating Overfitting:** By reducing the dimensionality of the data, PCA can help reduce the "curse of dimensionality" and prevent overfitting in non-regularized models.
 
 
-*
-**Visualization:** It allows for the projection of high-dimensional feature sets onto one, two, or three-dimensional spaces, enabling visualization through scatterplots or histograms.
+* **Visualization:** It allows for the projection of high-dimensional feature sets onto one, two, or three-dimensional spaces, enabling visualization through scatterplots or histograms.
 
 
 
@@ -40,28 +38,22 @@ PCA transforms a -dimensional sample vector  into a -dimensional vector  (where 
 
 ### The PCA Algorithm Steps:
 
-1.
-**Standardization:** Standardize the -dimensional dataset to ensure all features are on the same scale. PCA is highly sensitive to data scaling; if features have different ranges, the algorithm will be dominated by those with larger errors or scales.
+1. **Standardization:** Standardize the -dimensional dataset to ensure all features are on the same scale. PCA is highly sensitive to data scaling; if features have different ranges, the algorithm will be dominated by those with larger errors or scales.
 
 
-2.
-**Covariance Matrix:** Construct the covariance matrix of the standardized data.
+2. **Covariance Matrix:** Construct the covariance matrix of the standardized data.
 
 
-3.
-**Eigen-decomposition:** Decompose the covariance matrix into its **eigenvectors** and **eigenvalues**.
+3. **Eigen-decomposition:** Decompose the covariance matrix into its **eigenvectors** and **eigenvalues**.
 
 
-4.
-**Selecting Components:** Sort the eigenvalues by decreasing order to rank the corresponding eigenvectors. Select  eigenvectors that correspond to the  largest eigenvalues.
+4. **Selecting Components:** Sort the eigenvalues by decreasing order to rank the corresponding eigenvectors. Select  eigenvectors that correspond to the  largest eigenvalues.
 
 
-5.
-**Transformation Matrix:** Construct a  dimensional transformation matrix  from the selected  eigenvectors.
+5. **Transformation Matrix:** Construct a  dimensional transformation matrix  from the selected  eigenvectors.
 
 
-6.
-**Projection:** Project the original -dimensional dataset onto the new -dimensional feature subspace.
+6. **Projection:** Project the original -dimensional dataset onto the new -dimensional feature subspace.
 
 
 
@@ -85,16 +77,13 @@ Standard PCA is limited to linear transformations. For complex, nonlinearly sepa
 
 Common kernel functions used in this process include:
 
-*
-**Polynomial kernel**
+***Polynomial kernel**
 
 
-*
-**Radial Basis Function (RBF)** or Gaussian kernel
+***Radial Basis Function (RBF)** or Gaussian kernel
 
 
-*
-**Sigmoid (hyperbolic tangent) kernel**
+***Sigmoid (hyperbolic tangent) kernel**
 
 
 Based on the content of *Python Machine Learning* by Sebastian Raschka, here are 20 questions and answers specifically focused on Principal Component Analysis (PCA).
@@ -119,16 +108,13 @@ PCA is unsupervised because it does not take class labels into account; it focus
 
 According to the text, the benefits include:
 
-*
-**Computational efficiency:** Compressing data onto a lower-dimensional subspace.
+***Computational efficiency:** Compressing data onto a lower-dimensional subspace.
 
 
-*
-**Mitigating the "curse of dimensionality":** Reducing the number of features to help prevent overfitting in non-regularized models.
+***Mitigating the "curse of dimensionality":** Reducing the number of features to help prevent overfitting in non-regularized models.
 
 
-*
-**Data visualization:** Projecting high-dimensional features onto 1D, 2D, or 3D spaces for visual analysis.
+***Data visualization:** Projecting high-dimensional features onto 1D, 2D, or 3D spaces for visual analysis.
 
 
 
@@ -350,4 +336,5 @@ The text briefly touches on the relationship between PCA and Autoencoders (a typ
 * **Neural Networks:** Use nonlinear activation functions to capture much more complex patterns than the linear projections of PCA.
 
 ---
+
 
