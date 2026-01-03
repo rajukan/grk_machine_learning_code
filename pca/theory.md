@@ -184,19 +184,17 @@ The text identifies the `PCA` class within the `sklearn.decomposition` module as
 ```md
 # Mathematics of Principal Component Analysis (PCA)
 
-Principal Component Analysis (PCA) reduces a high-dimensional dataset into a lower-dimensional subspace by applying
-**eigen-decomposition on the covariance matrix**.
+Principal Component Analysis (PCA) reduces a high-dimensional dataset into a lower-dimensional subspace by applying eigen-decomposition on the covariance matrix.
 
 ---
 
 ## 1. Transformation Goal
 
-PCA finds a transformation matrix **W** that projects a **d-dimensional** sample vector **x**
- into a **k-dimensional** feature subspace, where **k < d**.
+PCA finds a transformation matrix W that projects a d-dimensional sample vector x into a k-dimensional feature subspace, where k < d.
 
-- **Original sample:** x ∈ ℝᵈ  
-- **Transformation matrix:** W ∈ ℝᵈˣᵏ  
-- **Transformed sample:** z = Wᵀx ∈ ℝᵏ  
+- Original sample: x ∈ ℝᵈ  
+- Transformation matrix: W ∈ ℝᵈˣᵏ  
+- Transformed sample: z = Wᵀx ∈ ℝᵏ  
 
 ---
 
@@ -207,25 +205,25 @@ Before computing the covariance matrix, features must be standardized so that ea
 - Mean = 0  
 - Variance = 1  
 
-For a feature **x**, the standardized value **z** is:
+For a feature x, the standardized value z is:
 
     z = (x − μ) / σ
 
 Where:
-- **μ** = mean of the feature  
-- **σ** = standard deviation of the feature  
+- μ = mean of the feature  
+- σ = standard deviation of the feature  
 
 ---
 
 ## 3. Covariance Matrix
 
-The covariance matrix **Σ** captures the pairwise covariance between features.
+The covariance matrix Σ captures the pairwise covariance between features.
 
-For standardized features **xᵢ** and **xⱼ**:
+For standardized features xᵢ and xⱼ:
 
     cov(xᵢ, xⱼ) = E[(xᵢ − μᵢ)(xⱼ − μⱼ)]
 
-The full covariance matrix is a **d × d symmetric matrix**:
+The full covariance matrix is a d × d symmetric matrix:
 
     Σ = (1 / (n − 1)) XᵀX
 
@@ -236,19 +234,19 @@ The full covariance matrix is a **d × d symmetric matrix**:
 
 ## 4. Eigen-decomposition
 
-Principal components are obtained by eigen-decomposing the covariance matrix **Σ**:
+Principal components are obtained by eigen-decomposing the covariance matrix Σ:
 
     Σv = λv
 
 Where:
-- **v** = eigenvector (principal component direction)  
-- **λ** = eigenvalue (variance explained by that component)  
+- v = eigenvector (principal component direction)  
+- λ = eigenvalue (variance explained by that component)  
 
 ---
 
 ## 5. Explained Variance Ratio
 
-The explained variance ratio of the *i-th* principal component is:
+The explained variance ratio of the i-th principal component is:
 
     explained_variance_ratioᵢ = λᵢ / Σⱼ λⱼ
 
@@ -258,13 +256,13 @@ This indicates how much of the total variance is captured by each component.
 
 ## 6. Projection Matrix (W)
 
-1. Sort eigenvalues in **descending order**
-2. Select the top **k** eigenvectors
+1. Sort eigenvalues in descending order  
+2. Select the top k eigenvectors  
 3. Form the projection matrix:
 
     W = [v₁ v₂ … vₖ]
 
-The original dataset **X ∈ ℝⁿˣᵈ** is projected into a **k-dimensional** space:
+The original dataset X ∈ ℝⁿˣᵈ is projected into a k-dimensional space:
 
     Z = XW ∈ ℝⁿˣᵏ
 
@@ -272,7 +270,7 @@ The original dataset **X ∈ ℝⁿˣᵈ** is projected into a **k-dimensional**
 
 ## Summary
 
-- PCA first standardize data  
+- PCA standardizes data  
 - Computes covariance matrix  
 - Performs eigen-decomposition  
 - Selects top components by explained variance  
@@ -280,6 +278,7 @@ The original dataset **X ∈ ℝⁿˣᵈ** is projected into a **k-dimensional**
 
 This process preserves maximum variance while reducing dimensionality.
 ```
+
 
 Based on the provided text, the author discusses **Principal Component Analysis (PCA)** primarily in the context of dimensionality reduction 
 and compares it to several related linear and nonlinear techniques.
