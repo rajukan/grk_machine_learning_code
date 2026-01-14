@@ -184,13 +184,15 @@ The text identifies the `PCA` class within the `sklearn.decomposition` module as
 ```md
 # Mathematics of Principal Component Analysis (PCA)
 
-Principal Component Analysis (PCA) reduces a high-dimensional dataset into a lower-dimensional subspace by applying eigen-decomposition on the covariance matrix.
+Principal Component Analysis (PCA) reduces a high-dimensional dataset into a lower-dimensional subspace by
+applying eigen-decomposition on the covariance matrix.
 
 ---
 
 ## 1. Transformation Goal
 
-PCA finds a transformation matrix W that projects a d-dimensional sample vector x into a k-dimensional feature subspace, where k < d.
+PCA finds a transformation matrix W that projects a d-dimensional sample vector x into a k-dimensional feature subspace,
+ where k < d.
 
 - Original sample: x ∈ ℝᵈ  
 - Transformation matrix: W ∈ ℝᵈˣᵏ  
@@ -338,6 +340,7 @@ The text briefly touches on the relationship between PCA and Autoencoders (a typ
 * **Neural Networks:** Use nonlinear activation functions to capture much more complex patterns than the linear projections of PCA.
 
 ---
+
 
 
 
